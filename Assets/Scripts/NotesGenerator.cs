@@ -50,6 +50,19 @@ public class NotesGenerator : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         NotesGen(false);
+
+        yield return new WaitForSeconds(0.2f);
+
+        NotesGen(false);
+
+        yield return new WaitForSeconds(0.2f);
+
+        NotesGen(false);
+
+        yield return new WaitForSeconds(0.2f);
+
+        NotesGen(true);
+        NotesGen(false);
     }
 
 

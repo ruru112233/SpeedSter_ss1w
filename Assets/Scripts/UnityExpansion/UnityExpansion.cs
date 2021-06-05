@@ -13,10 +13,4 @@ public static class UnityExpansion
         self.AddListener(call);
     }
 
-    public static void SetListener(this Button.ButtonClickedEvent self, UnityAction call, bool flag)
-    {
-        self.RemoveAllListeners();
-        self.AddListener(call);
-    }
-
 }
