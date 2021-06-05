@@ -16,10 +16,17 @@ public class NotesGenerator : MonoBehaviour
     [SerializeField]
     private Transform notesTopPos = null
                     , notesBottmPos = null;
+
+    private float startTime = 0;
     
+    [SerializeField]
+    private CsvWriter csvWriter;
+
+    private bool isPlaying = false;
+
     private void Awake()
     {
-        //testStartButton.onClick.SetListener(NotesGen);
+        testStartButton.onClick.SetListener(StartMusic);
     }
 
     // Start is called before the first frame update
@@ -31,8 +38,44 @@ public class NotesGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPlaying)
+        {
+            DetectKeys();
+        }
     }
+
+    // 音楽スタート
+    public void StartMusic()
+    {
+        startTime = Time.time;
+        isPlaying = true;
+    }
+
+    void DetectKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            WriteNotesTiming(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            WriteNotesTiming(1);
+        }
+    }
+
+    void WriteNotesTiming(int num)
+    {
+        Debug.Log(GetTiming());
+
+        csvWriter.WriteCSV(GetTiming().ToString() + "," + num.ToString());
+    }
+
+    float GetTiming()
+    {
+        return Time.time - startTime;
+    }
+
 
     // ノーツの生成タイミング
     private IEnumerator NotesInstanceTiming()

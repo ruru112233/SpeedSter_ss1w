@@ -20,7 +20,7 @@ public class NotesController : MonoBehaviour
 
         if (transform.position.x <= -10f)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
