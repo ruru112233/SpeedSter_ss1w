@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class JudgmentType
+{
+    public string Perfect = "パーフェクト";
+    public string Great = "グレート";
+    public string Good = "グッド";
+    public string Bad = "バッド";
+    public string Miss = "ミス";
+}
+
 public class NotesController : MonoBehaviour
 {
     [SerializeField]
@@ -9,6 +18,9 @@ public class NotesController : MonoBehaviour
 
     [SerializeField]
     private int lineNum;
+
+    [SerializeField]
+    private Transform judgmentLine = null;
 
     public GameController gameController;
 
@@ -19,7 +31,8 @@ public class NotesController : MonoBehaviour
     void Start()
     {
         lineKey = GameUtil.GetKeyCodeByLineNum(lineNum);
-        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        judgmentLine = GameObject.FindWithTag("JudgmentLine").transform;
     }
 
     // Update is called once per frame
@@ -27,6 +40,7 @@ public class NotesController : MonoBehaviour
     {
         transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
 
+        
         if (transform.position.x <= -10f)
         {
             Debug.Log(lineNum);
@@ -40,15 +54,10 @@ public class NotesController : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         isInLine = true;
     }
-
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    isInLine = true;
-    //}
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -59,9 +68,40 @@ public class NotesController : MonoBehaviour
     {
         if (Input.GetKeyDown(key))
         {
+            JudgmentResult();
             gameController.GoodTimingFunc(lineNum);
             Destroy(this.gameObject);
         }
+    }
+
+    // 判定ラインとノーツの距離による判定結果
+    void JudgmentResult()
+    {
+        JudgmentType judgmentType = new JudgmentType();
+
+        float distance = Mathf.Abs(judgmentLine.transform.position.x - transform.position.x);
+
+        if (distance <= 0.05f)
+        {
+            GameManager.instance.testText.text = judgmentType.Perfect;
+        }
+        else if(distance <= 0.10f)
+        {
+            GameManager.instance.testText.text = judgmentType.Great;
+        }
+        else if(distance <= 0.20f)
+        {
+            GameManager.instance.testText.text = judgmentType.Good;
+        }
+        else if(distance <= 0.30f)
+        {
+            GameManager.instance.testText.text = judgmentType.Bad;
+        }
+        else
+        {
+            GameManager.instance.testText.text = judgmentType.Miss;
+        }
+
     }
 
 }

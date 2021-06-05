@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public enum JudgementType
-    {
-        None,
-        Miss,
-        Perfect,
-        Great,
-        Good,
-        Bad
-    }
+    public Text testText = null;
 
+    public static GameManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
