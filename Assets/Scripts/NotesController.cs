@@ -29,6 +29,7 @@ public class NotesController : MonoBehaviour
 
         if (transform.position.x <= -10f)
         {
+            Debug.Log(lineNum);
             Destroy(gameObject);
         }
 
@@ -39,16 +40,19 @@ public class NotesController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         isInLine = true;
-        Debug.Log(isInLine);
     }
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    isInLine = true;
+    //}
 
     private void OnTriggerExit2D(Collider2D other)
     {
         isInLine = false;
-        Debug.Log(isInLine);
     }
 
     void CheckInput(KeyCode key)
