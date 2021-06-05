@@ -9,12 +9,12 @@ public static class GameUtil
         switch (lineNum)
         {
             case 0:
+                return KeyCode.DownArrow;
             case 1:
-                return KeyCode.Space;
+                return KeyCode.UpArrow;
             default:
                 return KeyCode.None;
         }
     }
-
 
 }

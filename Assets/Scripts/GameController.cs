@@ -80,7 +80,6 @@ public class GameController : MonoBehaviour
     void LoadCSV()
     {
         TextAsset csv = Resources.Load(filePass) as TextAsset;
-        Debug.Log(csv.text);
         StringReader reader = new StringReader(csv.text);
 
         int i = 0;
