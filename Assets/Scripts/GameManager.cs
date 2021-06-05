@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public enum JudgementType
+    {
+        None,
+        Miss,
+        Perfect,
+        Great,
+        Good,
+        Bad
+    }
 
 
     // Start is called before the first frame update
