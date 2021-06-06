@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7247899320445172041}
   - component: {fileID: 7279268121522734565}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2964610014051429881}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Target Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 1155567597459494482}
   - component: {fileID: 4325010163029968916}
   - component: {fileID: 5349582681321206473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}

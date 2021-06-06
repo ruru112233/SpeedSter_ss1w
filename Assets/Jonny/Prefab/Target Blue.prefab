@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8771133975995065817}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Target Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 8771133976737279239}
   - component: {fileID: 8771133976737279238}
   - component: {fileID: 8771133976737279236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8771133976825242880}
   - component: {fileID: 8771133976825242883}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
