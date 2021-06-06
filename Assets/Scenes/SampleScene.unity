@@ -393,6 +393,63 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!1001 &978283377
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 987703043632910997, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 869.1057
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 420.74185
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -332.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987703043632911003, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d6356e579203b24692cdf4a8f5868d9, type: 3}
 --- !u!1 &1060184919
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ad5015f93c29646a52ba03d8248d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: Resources/CSV/TestTiming
+  fileName: Resources/CSV/ShiningStar
 --- !u!4 &1203676552
 Transform:
   m_ObjectHideFlags: 0
@@ -562,6 +619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34071d359c28d4c42a3df743c2e388eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testText: {fileID: 0}
+  pref: []
 --- !u!1 &1317979546
 GameObject:
   m_ObjectHideFlags: 0

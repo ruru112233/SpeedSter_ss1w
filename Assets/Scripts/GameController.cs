@@ -54,9 +54,11 @@ public class GameController : MonoBehaviour
         } 
     }
 
+    // 音楽スタート
     private void StartGame()
     {
         startButton.SetActive(false);
+        AudioManager.instance.PlayBGM(0);
         startTime = Time.time;
         isPlaying = true;
     }
