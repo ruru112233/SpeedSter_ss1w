@@ -24,6 +24,9 @@ public class NotesGenerator : MonoBehaviour
 
     private bool isPlaying = false;
 
+    [SerializeField]
+    int bgmNum;
+
     private void Awake()
     {
         testStartButton.onClick.SetListener(StartMusic);
@@ -52,10 +55,10 @@ public class NotesGenerator : MonoBehaviour
     //    }
     //}
 
-    // 音楽スタート
+    // ???y?X?^?[?g
     public void StartMusic()
     {
-        AudioManager.instance.PlayBGM(0);
+        AudioManager.instance.PlayBGM(bgmNum);
         startTime = Time.time;
         isPlaying = true;
     }
@@ -86,7 +89,7 @@ public class NotesGenerator : MonoBehaviour
     }
 
 
-    // ノーツの生成タイミング
+    // ?m?[?c???????^?C?~???O
     private IEnumerator NotesInstanceTiming()
     {
         yield return new WaitForSeconds(0.2f);
@@ -118,7 +121,7 @@ public class NotesGenerator : MonoBehaviour
     }
 
 
-    // ノーツを流す
+    // ?m?[?c??????
     private void NotesGen(bool topFlag)
     {
         if (topFlag)

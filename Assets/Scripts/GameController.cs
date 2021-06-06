@@ -32,6 +32,9 @@ public class GameController : MonoBehaviour
 
     private int score = 0;
 
+    [SerializeField]
+    int bgmNum;
+
     private void Awake()
     {
         startButton.GetComponent<Button>().onClick.SetListener(StartGame);
@@ -62,11 +65,11 @@ public class GameController : MonoBehaviour
         }
     }
 
-    // 音楽スタート
+    // ???y?X?^?[?g
     private void StartGame()
     {
         startButton.SetActive(false);
-        AudioManager.instance.PlayBGM(0);
+        AudioManager.instance.PlayBGM(bgmNum);
         startTime = Time.time;
         isPlaying = true;
     }
