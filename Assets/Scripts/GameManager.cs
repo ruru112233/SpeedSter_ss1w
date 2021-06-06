@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public Text testText = null;
 
+    public GameObject[] pref;
+
     public static GameManager instance;
 
     private void Awake()
