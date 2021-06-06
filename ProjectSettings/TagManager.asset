@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Target
+    uniqueID: 1024907165
+    locked: 0
