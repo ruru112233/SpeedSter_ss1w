@@ -84,22 +84,29 @@ public class NotesController : MonoBehaviour
         if (distance <= 0.05f)
         {
             GameManager.instance.testText.text = judgmentType.Perfect;
+            Instantiate(GameManager.instance.pref[0], transform.position, transform.rotation);
         }
         else if(distance <= 0.10f)
         {
             GameManager.instance.testText.text = judgmentType.Great;
+            Instantiate(GameManager.instance.pref[1], transform.position, transform.rotation);
         }
         else if(distance <= 0.20f)
         {
             GameManager.instance.testText.text = judgmentType.Good;
+            Instantiate(GameManager.instance.pref[2], transform.position, transform.rotation);
+
         }
         else if(distance <= 0.30f)
         {
             GameManager.instance.testText.text = judgmentType.Bad;
+            Instantiate(GameManager.instance.pref[3], transform.position, transform.rotation);
+
         }
         else
         {
             GameManager.instance.testText.text = judgmentType.Miss;
+            Instantiate(GameManager.instance.pref[4], transform.position, transform.rotation);
         }
 
     }
