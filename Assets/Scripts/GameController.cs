@@ -35,6 +35,11 @@ public class GameController : MonoBehaviour
     [SerializeField]
     int bgmNum;
 
+    // プール用のオブジェクト
+    [SerializeField]
+    private Transform bluePool = null
+                    , redPool = null;
+
     private void Awake()
     {
         startButton.GetComponent<Button>().onClick.SetListener(StartGame);
@@ -65,6 +70,45 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // オブジェクトプール
+    void InstNotes(int num, Vector3 pos, Quaternion rotation)
+    {
+        if (num == 1)
+        {
+            foreach (Transform t in bluePool)
+            {
+                if (!t.gameObject.activeSelf)
+                {
+                    t.SetPositionAndRotation(pos, rotation);
+                    t.gameObject.SetActive(true);
+                    return;
+                }
+            }
+        }
+        else if(num == 0)
+        {
+            foreach (Transform t in redPool)
+            {
+                if (!t.gameObject.activeSelf)
+                {
+                    t.SetPositionAndRotation(pos, rotation);
+                    t.gameObject.SetActive(true);
+                    return;
+                }
+            }
+        }
+
+        if (num == 1)
+        {
+            Instantiate(notes[num], pos, Quaternion.identity, bluePool);
+        }
+        else if(num == 0)
+        {
+            Instantiate(notes[num], pos, Quaternion.identity, redPool);
+        }
+    }
+
+
     // ???y?X?^?[?g
     private void StartGame()
     {
@@ -85,9 +129,13 @@ public class GameController : MonoBehaviour
 
     void SpawnNotes(int num)
     {
-        Instantiate(notes[num],
-            new Vector3(10.0f ,  (2.0f * num) - 3.0f, 0),
-            Quaternion.identity);
+        Vector3 pos = new Vector3(10.0f, (3.0f * num) - 1.8f);
+
+        InstNotes(num, pos, Quaternion.identity);
+
+        //Instantiate(notes[num],
+        //    new Vector3(10.0f ,  (3.0f * num) - 1.8f, 0),
+        //    Quaternion.identity);
     }
 
     void LoadCSV()

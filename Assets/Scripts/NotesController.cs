@@ -41,11 +41,11 @@ public class NotesController : MonoBehaviour
         //transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
 
 
-        if (transform.position.x <= -10f)
-        {
-            Debug.Log(lineNum);
-            Destroy(gameObject);
-        }
+        //if (transform.position.x <= -10f)
+        //{
+        //    Debug.Log(lineNum);
+        //    Destroy(gameObject);
+        //}
 
         if (isInLine)
         {
@@ -79,13 +79,20 @@ public class NotesController : MonoBehaviour
         isInLine = false;
     }
 
+    private void OnBecameInvisible()
+    {
+        // 画面外に行ったら、非アクティブにする
+        gameObject.SetActive(false);
+    }
+
     void CheckInput(KeyCode key)
     {
         if (Input.GetKeyDown(key))
         {
             JudgmentResult();
             gameController.GoodTimingFunc(lineNum);
-            Destroy(this.gameObject);
+            transform.position += new Vector3(-30, 0, 0);
+            //Destroy(this.gameObject);
         }
     }
 
