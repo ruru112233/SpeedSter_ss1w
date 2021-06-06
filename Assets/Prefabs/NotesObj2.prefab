@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8179360146497205230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e9d5ecab78a1245b116a39b4169ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notesSpeed: 2.5
+  notesSpeed: 1.5
   lineNum: 1
   judgmentLine: {fileID: 0}
   gameController: {fileID: 0}
