@@ -48,10 +48,18 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        //if (isPlaying)
+        //{
+        //    CheckNextNotes();
+        //} 
+    }
+
+    private void FixedUpdate()
+    {
         if (isPlaying)
         {
             CheckNextNotes();
-        } 
+        }
     }
 
     // 音楽スタート

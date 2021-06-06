@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e9d5ecab78a1245b116a39b4169ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notesSpeed: 2
+  notesSpeed: 2.5
   lineNum: 0
   judgmentLine: {fileID: 0}
   gameController: {fileID: 0}

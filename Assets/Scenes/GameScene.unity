@@ -416,7 +416,7 @@ MonoBehaviour:
   - {fileID: 8179360146497205230, guid: 70b9d8f256d526e4cb03ca5f0bf623f0, type: 3}
   - {fileID: 8179360146497205230, guid: 1af66c6d952d3ad4da4b67db92afe9a9, type: 3}
   filePass: CSV/ShiningStar
-  timeOffset: -8.2
+  timeOffset: -6
   startButton: {fileID: 2015981619}
   scoreText: {fileID: 0}
 --- !u!1 &914005902
@@ -544,8 +544,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914005902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6405, y: -2.3377, z: 0}
-  m_LocalScale: {x: 0.16055623, y: 4.0031223, z: 1}
+  m_LocalPosition: {x: -4.6593, y: -2.3377, z: 0}
+  m_LocalScale: {x: 0.47392577, y: 4.0031223, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6

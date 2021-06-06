@@ -44,6 +44,14 @@ public class NotesGenerator : MonoBehaviour
         }
     }
 
+    //private void FixedUpdate()
+    //{
+    //    if (isPlaying)
+    //    {
+    //        DetectKeys();
+    //    }
+    //}
+
     // 音楽スタート
     public void StartMusic()
     {

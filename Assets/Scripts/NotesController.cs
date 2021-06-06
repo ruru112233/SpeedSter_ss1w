@@ -38,12 +38,28 @@ public class NotesController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
+        //transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
 
         
+        //if (transform.position.x <= -10f)
+        //{
+        //    Debug.Log(lineNum);
+        //    Destroy(gameObject);
+        //}
+
+        //if (isInLine)
+        //{
+        //    CheckInput(lineKey);
+        //}
+
+    }
+
+    private void FixedUpdate()
+    {
+        transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
+
         if (transform.position.x <= -10f)
         {
-            Debug.Log(lineNum);
             Destroy(gameObject);
         }
 
@@ -51,7 +67,6 @@ public class NotesController : MonoBehaviour
         {
             CheckInput(lineKey);
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
