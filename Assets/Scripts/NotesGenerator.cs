@@ -32,7 +32,7 @@ public class NotesGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(NotesInstanceTiming());
+        //StartCoroutine(NotesInstanceTiming());
     }
 
     // Update is called once per frame
@@ -47,18 +47,19 @@ public class NotesGenerator : MonoBehaviour
     // 音楽スタート
     public void StartMusic()
     {
+        AudioManager.instance.PlayBGM(0);
         startTime = Time.time;
         isPlaying = true;
     }
 
     void DetectKeys()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             WriteNotesTiming(0);
         }
 
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             WriteNotesTiming(1);
         }
