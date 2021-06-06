@@ -40,26 +40,10 @@ public class NotesController : MonoBehaviour
     {
         //transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
 
-        
-        //if (transform.position.x <= -10f)
-        //{
-        //    Debug.Log(lineNum);
-        //    Destroy(gameObject);
-        //}
-
-        //if (isInLine)
-        //{
-        //    CheckInput(lineKey);
-        //}
-
-    }
-
-    private void FixedUpdate()
-    {
-        transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
 
         if (transform.position.x <= -10f)
         {
+            Debug.Log(lineNum);
             Destroy(gameObject);
         }
 
@@ -67,6 +51,22 @@ public class NotesController : MonoBehaviour
         {
             CheckInput(lineKey);
         }
+
+    }
+
+    private void FixedUpdate()
+    {
+        transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
+
+        //if (transform.position.x <= -10f)
+        //{
+        //    Destroy(gameObject);
+        //}
+
+        //if (isInLine)
+        //{
+        //    CheckInput(lineKey);
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D other)
