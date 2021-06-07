@@ -164,7 +164,12 @@ public class GameController : MonoBehaviour
 
     public void ScoreCount(int num)
     {
-        GameManager.instance.Score += num;
+        int comboCount = 1;
+
+        if (GameManager.instance.ComboCount >= 5)
+            comboCount = GameManager.instance.ComboCount;
+        
+        GameManager.instance.Score += num * comboCount;
 
         // スコアの表示
         scoreText.text = GameManager.instance.Score.ToString();
