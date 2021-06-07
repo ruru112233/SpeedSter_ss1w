@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using System;
 using UnityEngine.UI;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 public class GameController : MonoBehaviour
 {
@@ -30,7 +31,8 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private Text scoreText;
 
-    private int score = 0;
+    [SerializeField]
+    private Text comboText;
 
     [SerializeField]
     int bgmNum;
@@ -56,18 +58,20 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        //if (isPlaying)
-        //{
-        //    CheckNextNotes();
-        //} 
-    }
-
-    private void FixedUpdate()
-    {
         if (isPlaying)
         {
             CheckNextNotes();
         }
+
+        
+    }
+
+    private void FixedUpdate()
+    {
+        //if (isPlaying)
+        //{
+        //    CheckNextNotes();
+        //}
     }
 
     // オブジェクトプール
@@ -84,6 +88,9 @@ public class GameController : MonoBehaviour
                     return;
                 }
             }
+
+            Instantiate(notes[num], pos, Quaternion.identity, bluePool);
+
         }
         else if(num == 0)
         {
@@ -96,16 +103,11 @@ public class GameController : MonoBehaviour
                     return;
                 }
             }
+
+            Instantiate(notes[num], pos, Quaternion.identity, redPool);
+
         }
 
-        if (num == 1)
-        {
-            Instantiate(notes[num], pos, Quaternion.identity, bluePool);
-        }
-        else if(num == 0)
-        {
-            Instantiate(notes[num], pos, Quaternion.identity, redPool);
-        }
     }
 
 
@@ -132,10 +134,6 @@ public class GameController : MonoBehaviour
         Vector3 pos = new Vector3(10.0f, (3.0f * num) - 1.8f);
 
         InstNotes(num, pos, Quaternion.identity);
-
-        //Instantiate(notes[num],
-        //    new Vector3(10.0f ,  (3.0f * num) - 1.8f, 0),
-        //    Quaternion.identity);
     }
 
     void LoadCSV()
@@ -164,12 +162,26 @@ public class GameController : MonoBehaviour
         return Time.time - startTime;
     }
 
-    public void GoodTimingFunc(int num)
+    public void ScoreCount(int num)
     {
-        Debug.Log("Line:" + num + " good! ");
-        Debug.Log(GetMusicTime());
+        GameManager.instance.Score += num;
 
-        score++;
+        // スコアの表示
+        scoreText.text = GameManager.instance.Score.ToString();
+    }
+
+    public void ComboCount(bool gjobFlag)
+    {
+        if (gjobFlag)
+        {
+            GameManager.instance.ComboCount++;
+        }
+        else
+        {
+            GameManager.instance.ComboCount = 0;
+        }
+
+        comboText.text = GameManager.instance.ComboCount.ToString();
     }
 
 }
