@@ -77,6 +77,11 @@ public class NotesController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         isInLine = false;
+
+        if (other.gameObject.tag == "MissLine")
+        {
+            gameController.ComboCount(false);
+        }
     }
 
     private void OnBecameInvisible()
