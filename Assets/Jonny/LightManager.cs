@@ -5,20 +5,22 @@ using UnityEngine;
 public class LightManager : MonoBehaviour
 {
     [SerializeField] float speed;
-    int rad;
+
+    [SerializeField] GameObject[] lights;
 
     void Start()
     {
-        rad = 5;
-        StartCoroutine(ColorChange());
+        StartCoroutine(Flash());
+        StartCoroutine(Flash());
+        StartCoroutine(Flash());
+        StartCoroutine(Flash());
     }
 
     void Update()
     {
-        /*
-        transform.eulerAngles += new Vector3(0, 0, rad * Time.deltaTime * speed);
+        transform.eulerAngles += new Vector3(0, 0, 1 * Time.deltaTime * speed);
 
-        if (transform.rotation.z >= 15)
+        /*if (transform.rotation.z >= 15)
         {
             rad = -5;
         }
@@ -41,5 +43,30 @@ public class LightManager : MonoBehaviour
             GetComponentInChildren<Light>().color = new Color(red, green, blue);
             yield return new WaitForSeconds(2);
         }
+    }
+
+    IEnumerator Flash()
+    {
+        while(true)
+        {
+            float waitTime = Random.Range(0.5f, 1f);
+
+            int n = Random.Range(0, lights.Length);
+            LightOn(n);
+            yield return new WaitForSeconds(waitTime);
+
+            LightOff(n);
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
+
+    void LightOff(int n)
+    {
+        lights[n].SetActive(false);
+    }
+
+    void LightOn(int n)
+    {
+        lights[n].SetActive(true);
     }
 }
