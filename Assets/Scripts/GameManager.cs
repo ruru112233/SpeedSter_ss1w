@@ -40,7 +40,8 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
 
-        rankingButton.onClick.SetListener(RankingButton);
+        if (rankingButton != null)
+            rankingButton.onClick.SetListener(RankingButton);
     }
 
     // Start is called before the first frame update
