@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using NCMB;
 
 public class GameManager : MonoBehaviour
 {
     public Text testText = null;
 
     public GameObject[] pref;
+
+    [SerializeField]
+    private Button rankingButton = null;
 
     // ÉXÉRÉA
     private int score = 0;
@@ -35,6 +39,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        rankingButton.onClick.SetListener(RankingButton);
     }
 
     // Start is called before the first frame update
@@ -47,6 +53,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void RankingButton()
+    {
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(Score);
     }
 
 
