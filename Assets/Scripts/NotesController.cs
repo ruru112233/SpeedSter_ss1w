@@ -89,28 +89,28 @@ public class NotesController : MonoBehaviour
 
         float distance = Mathf.Abs(judgmentLine.transform.position.x - transform.position.x);
 
-        if (distance <= 0.10f)
+        if (distance <= 0.15f)
         {
             GameManager.instance.testText.text = judgmentType.Perfect;
             Instantiate(GameManager.instance.pref[0], transform.position, transform.rotation);
             gameController.ScoreCount(100);
             gameController.ComboCount(true);
         }
-        else if(distance <= 0.20f)
+        else if(distance <= 0.30f)
         {
             GameManager.instance.testText.text = judgmentType.Great;
             Instantiate(GameManager.instance.pref[1], transform.position, transform.rotation);
             gameController.ScoreCount(50);
             gameController.ComboCount(true);
         }
-        else if(distance <= 0.30f)
+        else if(distance <= 0.40f)
         {
             GameManager.instance.testText.text = judgmentType.Good;
             Instantiate(GameManager.instance.pref[2], transform.position, transform.rotation);
             gameController.ScoreCount(10);
             gameController.ComboCount(true);
         }
-        else if(distance <= 0.40f)
+        else if(distance <= 0.50f)
         {
             GameManager.instance.testText.text = judgmentType.Bad;
             Instantiate(GameManager.instance.pref[3], transform.position, transform.rotation);
