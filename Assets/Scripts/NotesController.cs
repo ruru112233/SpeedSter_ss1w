@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class JudgmentType
 {
-    public string Perfect = "?p?[?t?F?N?g";
-    public string Great = "?O???[?g";
-    public string Good = "?O?b?h";
-    public string Bad = "?o?b?h";
-    public string Miss = "?~?X";
+    public string Perfect = "パーフェクト";
+    public string Great = "グレート";
+    public string Good = "グッド";
+    public string Bad = "バッド";
+    public string Miss = "ミス";
 }
 
 public class NotesController : MonoBehaviour

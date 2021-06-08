@@ -65,12 +65,12 @@ public class NotesGenerator : MonoBehaviour
 
     void DetectKeys()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.X))
         {
             WriteNotesTiming(0);
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             WriteNotesTiming(1);
         }
