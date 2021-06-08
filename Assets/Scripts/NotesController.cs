@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class JudgmentType
 {
-    public string Perfect = "パーフェクト";
-    public string Great = "グレート";
-    public string Good = "グッド";
-    public string Bad = "バッド";
-    public string Miss = "ミス";
+    public string Perfect = "?p?[?t?F?N?g";
+    public string Great = "?O???[?g";
+    public string Good = "?O?b?h";
+    public string Bad = "?o?b?h";
+    public string Miss = "?~?X";
 }
 
 public class NotesController : MonoBehaviour
@@ -68,7 +68,7 @@ public class NotesController : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        // 画面外に行ったら、非アクティブにする
+        // ?????O???s???????A???A?N?e?B?u??????
         gameObject.SetActive(false);
     }
 
@@ -82,7 +82,7 @@ public class NotesController : MonoBehaviour
         }
     }
 
-    // 判定ラインとノーツの距離による判定結果
+    // ???????C?????m?[?c????????????????????
     void JudgmentResult()
     {
         JudgmentType judgmentType = new JudgmentType();
