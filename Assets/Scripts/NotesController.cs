@@ -25,12 +25,13 @@ public class NotesController : MonoBehaviour
     public GameController gameController;
 
     private bool isInLine = false;
-    private KeyCode lineKey;
+    private KeyCode lineKey, lineKey2;
 
     // Start is called before the first frame update
     void Start()
     {
         lineKey = GameUtil.GetKeyCodeByLineNum(lineNum);
+        lineKey2 = GameUtil.GetKeyCodeByLineNum2(lineNum);
         gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
         judgmentLine = GameObject.FindWithTag("JudgmentLine").transform;
     }
@@ -38,18 +39,9 @@ public class NotesController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
-
-
-        //if (transform.position.x <= -10f)
-        //{
-        //    Debug.Log(lineNum);
-        //    Destroy(gameObject);
-        //}
-
         if (isInLine)
         {
-            CheckInput(lineKey);
+            CheckInput(lineKey, lineKey2);
         }
 
     }
@@ -57,16 +49,6 @@ public class NotesController : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position += new Vector3(-notesSpeed * Time.deltaTime, 0, 0);
-
-        //if (transform.position.x <= -10f)
-        //{
-        //    Destroy(gameObject);
-        //}
-
-        //if (isInLine)
-        //{
-        //    CheckInput(lineKey);
-        //}
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -90,9 +72,9 @@ public class NotesController : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void CheckInput(KeyCode key)
+    void CheckInput(KeyCode key, KeyCode key2)
     {
-        if (Input.GetKeyDown(key))
+        if (Input.GetKeyDown(key) || Input.GetKeyDown(key2))
         {
             JudgmentResult();
             transform.position += new Vector3(-30, 0, 0);
