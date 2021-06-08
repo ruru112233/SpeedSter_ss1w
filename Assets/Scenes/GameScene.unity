@@ -710,7 +710,7 @@ MonoBehaviour:
   - {fileID: 8179360146497205230, guid: 70b9d8f256d526e4cb03ca5f0bf623f0, type: 3}
   - {fileID: 8179360146497205230, guid: 1af66c6d952d3ad4da4b67db92afe9a9, type: 3}
   filePass: CSV/ClubMusic
-  timeOffset: 12
+  timeOffset: -1
   startButton: {fileID: 2015981619}
   scoreText: {fileID: 235395275}
   comboText: {fileID: 1757468526}
