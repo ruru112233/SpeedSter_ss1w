@@ -6,12 +6,12 @@ public class TargetManager2 : MonoBehaviour
 {
     void Update()
     {
-        transform.eulerAngles += new Vector3(0, 0, 120 * Time.deltaTime);
+        transform.eulerAngles += new Vector3(0, 0, 160 * Time.deltaTime);
 
-        transform.localScale -= new Vector3(2.5f * Time.deltaTime, 2.5f * Time.deltaTime, 1);
-        if (transform.localScale.x <= 2.0f)
+        transform.localScale -= new Vector3(3 * Time.deltaTime, 3 * Time.deltaTime, 1);
+        if (transform.localScale.x <= 2.2f)
         {
-            transform.localScale = new Vector3(3, 3, 1);
+            transform.localScale = new Vector3(3.5f, 3.5f, 1);
         }
     }
 }
