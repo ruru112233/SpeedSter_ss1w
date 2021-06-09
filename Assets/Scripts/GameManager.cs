@@ -6,7 +6,7 @@ using NCMB;
 
 public class GameManager : MonoBehaviour
 {
-    public Text testText = null;
+    public RectTransform textReady = null;
 
     public GameObject[] pref;
 
@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
         blueJudgment.SetActive(false);
         redJudgment.SetActive(false);
         comboObj.SetActive(false);
+
     }
 
     // Update is called once per frame
