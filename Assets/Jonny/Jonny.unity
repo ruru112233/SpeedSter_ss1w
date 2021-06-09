@@ -465,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 928509635729134178, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1324540986962650943, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1460,7 +1460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247874986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 215.92653, y: 176.70619, z: -14.060182}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1486,6 +1486,15 @@ MonoBehaviour:
   - {fileID: 4505366225871025549, guid: 716d7e0b6bf0f46c48d07705d00ea4ac, type: 3}
   - {fileID: 1035621901904975994, guid: 51f8427256854425c8fe394ae86ac161, type: 3}
   rankingButton: {fileID: 454684910}
+  perfect: {fileID: 0}
+  great: {fileID: 0}
+  good: {fileID: 0}
+  bad: {fileID: 0}
+  miss: {fileID: 0}
+  blueJudgment: {fileID: 0}
+  blueFlag: 0
+  redJudgment: {fileID: 0}
+  redFlag: 0
 --- !u!1 &1348844641 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 657104160484224118, guid: 7c3955eb0519f4fdfa84ac14aee3bbf9, type: 3}
