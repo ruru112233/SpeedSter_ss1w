@@ -461,7 +461,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 928509635729134178, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
       propertyPath: m_Name
-      value: DancingGirl (1)
+      value: DancingGirl
+      objectReference: {fileID: 0}
+    - target: {fileID: 928509635729134178, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1324540986962650943, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
       propertyPath: m_LocalRotation.w
