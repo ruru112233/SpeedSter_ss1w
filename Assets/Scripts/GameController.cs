@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using System;
+//using System;
 using UnityEngine.UI;
 using System.Runtime.InteropServices.WindowsRuntime;
 
@@ -175,11 +175,13 @@ public class GameController : MonoBehaviour
         scoreText.text = GameManager.instance.Score.ToString();
     }
 
+
     public void ComboCount(bool gjobFlag)
     {
         if (gjobFlag)
         {
             GameManager.instance.ComboCount++;
+            GameManager.instance.comboObj.GetComponentInChildren<Text>().color = ColorChange();
         }
         else
         {
@@ -187,6 +189,14 @@ public class GameController : MonoBehaviour
         }
 
         comboText.text = GameManager.instance.ComboCount.ToString();
+    }
+
+    // コンボ数の色を変更
+    Color ColorChange()
+    {
+        Color color = new Color(Random.value, Random.value, Random.value, 1.0f);
+
+        return color;
     }
 
 }

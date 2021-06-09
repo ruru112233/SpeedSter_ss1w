@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     float redTime = 0;
     public bool redFlag = false;
 
+    public GameObject comboObj = null;
 
     public static GameManager instance;
 
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
     {
         blueJudgment.SetActive(false);
         redJudgment.SetActive(false);
+        comboObj.SetActive(false);
     }
 
     // Update is called once per frame
@@ -95,6 +97,15 @@ public class GameManager : MonoBehaviour
                 redFlag = false;
                 
             }
+        }
+
+        if (ComboCount > 3)
+        {
+            comboObj.SetActive(true);
+        }
+        else
+        {
+            comboObj.SetActive(false);
         }
     }
 
