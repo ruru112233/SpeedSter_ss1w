@@ -8,10 +8,10 @@ public class TargetManager2 : MonoBehaviour
     {
         transform.eulerAngles += new Vector3(0, 0, 120 * Time.deltaTime);
 
-        transform.localScale -= new Vector3(0.6f * Time.deltaTime, 0.6f * Time.deltaTime, 1);
-        if (transform.localScale.x <= 0.5f)
+        transform.localScale -= new Vector3(0.5f * Time.deltaTime, 0.5f * Time.deltaTime, 1);
+        if (transform.localScale.x <= 2.5f)
         {
-            transform.localScale = new Vector3(0.8f, 0.8f, 1);
+            transform.localScale = new Vector3(3, 3, 1);
         }
     }
 }
