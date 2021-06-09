@@ -91,38 +91,39 @@ public class NotesController : MonoBehaviour
 
         if (distance <= 0.15f)
         {
-            GameManager.instance.testText.text = judgmentType.Perfect;
             Instantiate(GameManager.instance.pref[0], transform.position, transform.rotation);
             gameController.ScoreCount(100);
             gameController.ComboCount(true);
+
+            GameManager.instance.JudgmentManager(1, lineKey);
         }
         else if(distance <= 0.30f)
         {
-            GameManager.instance.testText.text = judgmentType.Great;
             Instantiate(GameManager.instance.pref[1], transform.position, transform.rotation);
             gameController.ScoreCount(50);
             gameController.ComboCount(true);
+            GameManager.instance.JudgmentManager(2, lineKey);
         }
         else if(distance <= 0.40f)
         {
-            GameManager.instance.testText.text = judgmentType.Good;
             Instantiate(GameManager.instance.pref[2], transform.position, transform.rotation);
             gameController.ScoreCount(10);
             gameController.ComboCount(true);
+            GameManager.instance.JudgmentManager(3, lineKey);
         }
         else if(distance <= 0.50f)
         {
-            GameManager.instance.testText.text = judgmentType.Bad;
             Instantiate(GameManager.instance.pref[3], transform.position, transform.rotation);
             gameController.ScoreCount(1);
             gameController.ComboCount(false);
+            GameManager.instance.JudgmentManager(4, lineKey);
         }
         else
         {
-            GameManager.instance.testText.text = judgmentType.Miss;
             Instantiate(GameManager.instance.pref[4], transform.position, transform.rotation);
             GameManager.instance.ComboCount = 0;
             gameController.ComboCount(false);
+            GameManager.instance.JudgmentManager(5, lineKey);
         }
 
     }
