@@ -9,6 +9,9 @@ using System.Runtime.InteropServices.WindowsRuntime;
 public class GameController : MonoBehaviour
 {
     [SerializeField]
+    private GameObject zoomGirl = null;
+
+    [SerializeField]
     private GameObject[] notes = null;
     
     private float[] timing = null;
@@ -56,6 +59,7 @@ public class GameController : MonoBehaviour
     {
         timing = new float[1024];
         lineNum = new int[1024];
+        zoomGirl.SetActive(false);
 
         LoadCSV();
 
@@ -80,7 +84,7 @@ public class GameController : MonoBehaviour
         
         if (time > 50.0f)
         {
-            Debug.Log("onnnanokoScaleNoShori");
+            zoomGirl.SetActive(true);
         }
 
     }

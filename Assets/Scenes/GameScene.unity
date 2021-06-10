@@ -1359,6 +1359,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1374,6 +1375,38 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1838,6 +1871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa405920039802f40bac4aec3fd3543f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomGirl: {fileID: 267528019}
   notes:
   - {fileID: 8179360146497205230, guid: 70b9d8f256d526e4cb03ca5f0bf623f0, type: 3}
   - {fileID: 8179360146497205230, guid: 1af66c6d952d3ad4da4b67db92afe9a9, type: 3}
@@ -6724,8 +6758,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 2162805941292665638}
   m_Bounds:
-    m_Center: {x: 0, y: 0.001974821, z: 0}
-    m_Extent: {x: 1.3350002, y: 1.3280251, z: 0}
+    m_Center: {x: 0, y: 0.0019751787, z: 0}
+    m_Extent: {x: 1.3350004, y: 1.3280253, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!4 &469094282192298433
@@ -9967,8 +10001,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1638063914726449999}
   m_Bounds:
-    m_Center: {x: -0.0000009536743, y: -0.00000071525574, z: 0}
-    m_Extent: {x: 1.3349999, y: 1.3349999, z: 0}
+    m_Center: {x: -0.0000009536743, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 1.335, y: 1.335, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!4 &4160403302176022792
@@ -10423,8 +10457,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 9058666553176821199}
   m_Bounds:
-    m_Center: {x: -0.0000009536743, y: -0.00000071525574, z: 0}
-    m_Extent: {x: 1.3349999, y: 1.3349999, z: 0}
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 1.335, y: 1.335, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!4 &7247899319173970776
@@ -10555,8 +10589,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8434854819707774374}
   m_Bounds:
-    m_Center: {x: 0, y: 0.001974821, z: 0}
-    m_Extent: {x: 1.3350002, y: 1.3280251, z: 0}
+    m_Center: {x: 0, y: 0.0019751787, z: 0}
+    m_Extent: {x: 1.3350004, y: 1.3280253, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!4 &8434854819707774374
