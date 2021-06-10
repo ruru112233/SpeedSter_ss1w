@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] pref;
 
+    // アニメーション関係
+    [SerializeField]
+    private Animator anime = null;
+
+
     [SerializeField]
     private Button rankingButton = null;
 
@@ -43,7 +48,7 @@ public class GameManager : MonoBehaviour
     }
 
     // コンボ
-    private int comboCount;
+    private int comboCount = 0;
 
     public int ComboCount
     {
@@ -87,16 +92,20 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        AnimeChenge();
         blueJudgment.SetActive(false);
         redJudgment.SetActive(false);
         comboObj.SetActive(false);
+
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        AnimeChenge();
+
         if (blueFlag)
         {
             blueTime += Time.deltaTime;
@@ -206,5 +215,35 @@ public class GameManager : MonoBehaviour
 
     }
 
+
+    // コンボ数によるアニメーションのチェンジ
+    public void AnimeChenge()
+    {
+        if (ComboCount < 5)
+        {
+            PlayerAnime(true, false, false, false);
+        }
+        else if(ComboCount < 10)
+        {
+            PlayerAnime(false, true, false, false);
+        }
+        else if (ComboCount < 15)
+        {
+            PlayerAnime(false, false, true, false);
+        }
+        else
+        {
+            PlayerAnime(false, false, false, true);
+        }
+    }
+
+    // アニメーション
+    public void PlayerAnime(bool combo1, bool combo5, bool combo10, bool combo15)
+    {
+        anime.SetBool("combo1", combo1);
+        anime.SetBool("combo5", combo5);
+        anime.SetBool("combo10", combo10);
+        anime.SetBool("combo15", combo15);
+    }
 
 }

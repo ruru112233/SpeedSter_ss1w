@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
     private Transform bluePool = null
                     , redPool = null;
 
+    
     private void Awake()
     {
         startButton.GetComponent<Button>().onClick.SetListener(StartGame);
@@ -55,6 +56,15 @@ public class GameController : MonoBehaviour
         lineNum = new int[1024];
 
         LoadCSV();
+
+        StartCoroutine(GameStart());
+
+    }
+
+    IEnumerator GameStart()
+    {
+        yield return new WaitForSeconds(0.3f);
+        StartGame();
     }
 
     void Update()
@@ -207,5 +217,7 @@ public class GameController : MonoBehaviour
 
         return color;
     }
+
+    
 
 }
