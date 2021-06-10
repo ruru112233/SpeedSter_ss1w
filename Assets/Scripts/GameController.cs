@@ -115,6 +115,7 @@ public class GameController : MonoBehaviour
     private void StartGame()
     {
         startButton.SetActive(false);
+        StartCoroutine(GameManager.instance.StartScale());
         AudioManager.instance.PlayBGM(bgmNum);
         startTime = Time.time;
         isPlaying = true;
