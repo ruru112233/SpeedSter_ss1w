@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using NCMB;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
-    public RectTransform textReady = null;
+    public RectTransform textReady = null
+                       , textGo = null;
 
     public GameObject[] pref;
 
@@ -160,6 +162,36 @@ public class GameManager : MonoBehaviour
                 sr.sprite = miss;
                 break;
         }
+    }
+
+    public IEnumerator StartScale()
+    {
+
+        textReady.DOScale(
+                   new Vector3(3, 3, 1),　　//終了時点のScale
+                   1.0f 　　　　　　//時間
+                   );
+
+        yield return new WaitForSeconds(3.5f);
+
+        textReady.DOScale(
+                   Vector3.zero,　　//終了時点のScale
+                   0.0f 　　　　　　//時間
+                   );
+
+        textGo.DOScale(
+                   new Vector3(3, 3, 1),　　//終了時点のScale
+                   1.0f 　　　　　　//時間
+                   );
+
+        yield return new WaitForSeconds(2.0f);
+
+        textGo.DOScale(
+                   Vector3.zero,　　//終了時点のScale
+                   0.5f 　　　　　　//時間
+                   );
+
+
     }
 
 

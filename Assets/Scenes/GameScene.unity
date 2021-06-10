@@ -2373,6 +2373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textReady: {fileID: 1959254946}
+  textGo: {fileID: 2087074947}
   pref:
   - {fileID: 4134523531301762297, guid: 464d5d02a7b3044629f219453e81e1da, type: 3}
   - {fileID: 1824221518799442285, guid: aa8e8d08147e74f269e92aff005a0956, type: 3}
@@ -3798,7 +3799,7 @@ RectTransform:
   m_GameObject: {fileID: 1959254945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 1457089483}
   m_RootOrder: 6
@@ -4127,7 +4128,7 @@ RectTransform:
   m_GameObject: {fileID: 2087074946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 1457089483}
   m_RootOrder: 7
