@@ -42,7 +42,9 @@ public class GameController : MonoBehaviour
     private Transform bluePool = null
                     , redPool = null;
 
-    
+    float time = 0;
+
+
     private void Awake()
     {
         startButton.GetComponent<Button>().onClick.SetListener(StartGame);
@@ -72,9 +74,15 @@ public class GameController : MonoBehaviour
         if (isPlaying)
         {
             CheckNextNotes();
+            time = Time.time;
         }
 
         
+        if (time > 50.0f)
+        {
+            Debug.Log("onnnanokoScaleNoShori");
+        }
+
     }
 
     private void FixedUpdate()
