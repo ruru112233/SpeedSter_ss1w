@@ -1271,6 +1271,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: DancingGirl
       objectReference: {fileID: 0}
+    - target: {fileID: 1324540986962650943, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7415627
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324540986962650943, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6708836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104577137286967905, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6835626
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104577137286967905, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.72989196
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958679425576551080, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.68189603
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958679425576551080, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7314491
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147908269162674792, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99937063
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147908269162674792, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.035473578
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e07f69170f37340fc93134dd32b4e36c, type: 3}
 --- !u!1 &1247874986
@@ -1316,7 +1348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34071d359c28d4c42a3df743c2e388eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testText: {fileID: 2144538539}
+  textReady: {fileID: 0}
   pref:
   - {fileID: 4134523531301762297, guid: 464d5d02a7b3044629f219453e81e1da, type: 3}
   - {fileID: 1824221518799442285, guid: aa8e8d08147e74f269e92aff005a0956, type: 3}
@@ -1333,6 +1365,7 @@ MonoBehaviour:
   blueFlag: 0
   redJudgment: {fileID: 1466655271}
   redFlag: 0
+  comboObj: {fileID: 2017551781}
 --- !u!1 &1326131627
 GameObject:
   m_ObjectHideFlags: 0
