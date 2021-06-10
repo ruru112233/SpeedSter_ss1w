@@ -1365,7 +1365,7 @@ MonoBehaviour:
   blueFlag: 0
   redJudgment: {fileID: 1466655271}
   redFlag: 0
-  comboObj: {fileID: 2017551781}
+  comboObj: {fileID: 982417989}
 --- !u!1 &1326131627
 GameObject:
   m_ObjectHideFlags: 0
