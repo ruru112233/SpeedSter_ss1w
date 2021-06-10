@@ -15,6 +15,24 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Button rankingButton = null;
 
+    private int rankingViewCount = 0;
+
+    public int RankingViewCount
+    {
+        get { return rankingViewCount; }
+        set { rankingViewCount = value; }
+    }
+
+    private int notesCount = 0;
+
+    public int NotesCount
+    {
+        get { return notesCount; }
+        set { notesCount = value; }
+    }
+
+    bool rankingFlag = false;
+
     // ÉXÉRÉA
     private int score = 0;
 
@@ -69,6 +87,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         blueJudgment.SetActive(false);
         redJudgment.SetActive(false);
         comboObj.SetActive(false);
@@ -109,6 +128,12 @@ public class GameManager : MonoBehaviour
         else
         {
             comboObj.SetActive(false);
+        }
+
+        if(RankingViewCount <= NotesCount && !rankingFlag)
+        {
+            rankingFlag = true;
+            RankingButton();
         }
     }
 
