@@ -535,7 +535,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 375
-      y: 520
+      y: 519
       width: 142
       height: 78
     spriteID: 9ad0f23af1af94cbd99ff46225e4c828
@@ -980,7 +980,7 @@ ScriptedImporter:
     - {x: 0, y: 31}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -635, y: -453}
+    uvTransform: {x: -635, y: -454}
   - name: handL3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -989,7 +989,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 375
-      y: 167
+      y: 166
       width: 142
       height: 105
     spriteID: 644c94e6eb9be4a05af058b797237ebb
@@ -1565,7 +1565,7 @@ ScriptedImporter:
     - {x: 42, y: 0}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -635, y: -779}
+    uvTransform: {x: -635, y: -780}
   - name: handL4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2062,7 +2062,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 375
-      y: 393
+      y: 392
       width: 240
       height: 56
     spriteID: 06801828069a541aa80b28d4708d13d5
@@ -2935,7 +2935,7 @@ ScriptedImporter:
     - {x: 79, y: 1}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -419, y: -581}
+    uvTransform: {x: -419, y: -582}
   - name: armLU
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -3589,7 +3589,7 @@ ScriptedImporter:
     - {x: 58, y: 20}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -235, y: -972}
+    uvTransform: {x: -231, y: -972}
   - name: neck
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -11515,7 +11515,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 375
-      y: 606
+      y: 605
       width: 138
       height: 78
     spriteID: e8f9535d0110c466e9e25dadaa7ca2a6
@@ -11970,7 +11970,7 @@ ScriptedImporter:
     - {x: 0, y: 31}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 375, y: -367}
+    uvTransform: {x: 375, y: -368}
   - name: handR3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -11979,7 +11979,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 375
-      y: 280
+      y: 279
       width: 138
       height: 105
     spriteID: 67b65f51397534b4caa949e622d5288b
@@ -12556,7 +12556,7 @@ ScriptedImporter:
     - {x: 0, y: 43}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 375, y: -666}
+    uvTransform: {x: 375, y: -667}
   - name: handR4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -13003,7 +13003,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 375
-      y: 457
+      y: 456
       width: 232
       height: 55
     spriteID: 8590cc59d5cb540fdbb154246b8b6fb1
@@ -14008,7 +14008,7 @@ ScriptedImporter:
     - {x: 92, y: 14}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 282, y: -518}
+    uvTransform: {x: 282, y: -519}
   - name: armRU
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -15151,14 +15151,14 @@ ScriptedImporter:
     parentIndex: 2
     spriteID: 9ad0f23af1af94cbd99ff46225e4c828
     layerID: 34
-    mosaicPosition: {x: 375, y: 520}
+    mosaicPosition: {x: 375, y: 519}
   - name: handL3
     spriteName: handL3
     isGroup: 0
     parentIndex: 2
     spriteID: 644c94e6eb9be4a05af058b797237ebb
     layerID: 33
-    mosaicPosition: {x: 375, y: 167}
+    mosaicPosition: {x: 375, y: 166}
   - name: handL4
     spriteName: handL4
     isGroup: 0
@@ -15179,7 +15179,7 @@ ScriptedImporter:
     parentIndex: 1
     spriteID: 06801828069a541aa80b28d4708d13d5
     layerID: 31
-    mosaicPosition: {x: 375, y: 393}
+    mosaicPosition: {x: 375, y: 392}
   - name: armLU
     spriteName: armLU
     isGroup: 0
@@ -15319,14 +15319,14 @@ ScriptedImporter:
     parentIndex: 26
     spriteID: e8f9535d0110c466e9e25dadaa7ca2a6
     layerID: 6
-    mosaicPosition: {x: 375, y: 606}
+    mosaicPosition: {x: 375, y: 605}
   - name: handR3
     spriteName: handR3
     isGroup: 0
     parentIndex: 26
     spriteID: 67b65f51397534b4caa949e622d5288b
     layerID: 5
-    mosaicPosition: {x: 375, y: 280}
+    mosaicPosition: {x: 375, y: 279}
   - name: handR4
     spriteName: handR4
     isGroup: 0
@@ -15347,7 +15347,7 @@ ScriptedImporter:
     parentIndex: 25
     spriteID: 8590cc59d5cb540fdbb154246b8b6fb1
     layerID: 3
-    mosaicPosition: {x: 375, y: 457}
+    mosaicPosition: {x: 375, y: 456}
   - name: armRU
     spriteName: armRU
     isGroup: 0
