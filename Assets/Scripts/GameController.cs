@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         startButton.GetComponent<Button>().onClick.SetListener(StartGame);
+        
     }
 
     // Start is called before the first frame update
@@ -52,8 +53,8 @@ public class GameController : MonoBehaviour
     {
         timing = new float[1024];
         lineNum = new int[1024];
-        LoadCSV();
 
+        LoadCSV();
     }
 
     void Update()
@@ -141,6 +142,13 @@ public class GameController : MonoBehaviour
     {
         TextAsset csv = Resources.Load(filePass) as TextAsset;
         StringReader reader = new StringReader(csv.text);
+
+        string textLines = csv.text;
+        string[] textMessage = textLines.Split('\n');
+
+        int rowLength = textMessage.Length;
+
+        GameManager.instance.RankingViewCount = rowLength;
 
         int i = 0;
 
