@@ -12,9 +12,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] pref;
 
-    // アニメーション関係
+    // ?A?j???[?V???????W
     [SerializeField]
     private Animator anime = null;
+    [SerializeField]
+    private Animator animeZ = null;
 
 
     [SerializeField]
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     bool rankingFlag = false;
 
-    // スコア
+    // ?X?R?A
     private int score = 0;
 
     public int Score
@@ -47,7 +49,7 @@ public class GameManager : MonoBehaviour
         set { score = value; }
     }
 
-    // コンボ
+    // ?R???{
     private int comboCount = 0;
 
     public int ComboCount
@@ -62,13 +64,13 @@ public class GameManager : MonoBehaviour
                 , bad = null
                 , miss = null;
 
-    // ターゲット（青）の判定関係
+    // ?^?[?Q?b?g?i???j?????????W
     [SerializeField]
     private GameObject blueJudgment = null;
     float blueTime = 0;
     public bool blueFlag = false;
 
-    // ターゲット（赤）の判定関係
+    // ?^?[?Q?b?g?i???j?????????W
     [SerializeField]
     private GameObject redJudgment = null;
     float redTime = 0;
@@ -151,7 +153,7 @@ public class GameManager : MonoBehaviour
         naichilab.RankingLoader.Instance.SendScoreAndShowRanking(Score);
     }
 
-    // 判定管理
+    // ????????
     public void JudgmentManager(int num, KeyCode key)
     {
 
@@ -175,7 +177,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // スプライトの切り替え
+    // ?X?v???C?g??????????
     void JudgmentSprite(int num, SpriteRenderer sr)
     {
         switch (num)
@@ -216,7 +218,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // コンボ数によるアニメーションのチェンジ
+    // ?R???{?????????A?j???[?V???????`?F???W
     public void AnimeChenge()
     {
         if (ComboCount < 5)
@@ -237,13 +239,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // アニメーション
+    // ?A?j???[?V????
     public void PlayerAnime(bool combo1, bool combo5, bool combo10, bool combo15)
     {
         anime.SetBool("combo1", combo1);
         anime.SetBool("combo5", combo5);
         anime.SetBool("combo10", combo10);
         anime.SetBool("combo15", combo15);
+        animeZ.SetBool("combo1", combo1);
+        animeZ.SetBool("combo5", combo5);
+        animeZ.SetBool("combo10", combo10);
+        animeZ.SetBool("combo15", combo15);
     }
 
 }

@@ -59,7 +59,8 @@ public class GameController : MonoBehaviour
     {
         timing = new float[1024];
         lineNum = new int[1024];
-        zoomGirl.SetActive(false);
+        //zoomGirl.SetActive(false);
+        zoomGirl.transform.localScale = Vector3.zero;
 
         LoadCSV();
 
@@ -83,7 +84,8 @@ public class GameController : MonoBehaviour
         
         if (time > 67f)
         {
-            zoomGirl.SetActive(true);
+            //zoomGirl.SetActive(true);
+            zoomGirl.transform.localScale = new Vector3(-1.5f,1.5f,1.5f);
         }
 
     }
