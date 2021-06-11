@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     int bgmNum;
 
-    // プール用のオブジェクト
+    // ?v?[???p???I?u?W?F?N?g
     [SerializeField]
     private Transform bluePool = null
                     , redPool = null;
@@ -80,9 +80,8 @@ public class GameController : MonoBehaviour
             CheckNextNotes();
             time = Time.time;
         }
-
         
-        if (time > 50.0f)
+        if (time > 67f)
         {
             zoomGirl.SetActive(true);
         }
@@ -97,7 +96,7 @@ public class GameController : MonoBehaviour
         //}
     }
 
-    // オブジェクトプール
+    // ?I?u?W?F?N?g?v?[??
     void InstNotes(int num, Vector3 pos, Quaternion rotation)
     {
         if (num == 1)
@@ -202,7 +201,7 @@ public class GameController : MonoBehaviour
         
         GameManager.instance.Score += num * comboCount;
 
-        // スコアの表示
+        // ?X?R?A???\??
         scoreText.text = GameManager.instance.Score.ToString();
     }
 
@@ -222,7 +221,7 @@ public class GameController : MonoBehaviour
         comboText.text = GameManager.instance.ComboCount.ToString();
     }
 
-    // コンボ数の色を変更
+    // ?R???{?????F?????X
     Color ColorChange()
     {
         Color color = new Color(Random.value, Random.value, Random.value, 1.0f);
