@@ -5,6 +5,7 @@ using System.IO;
 //using System;
 using UnityEngine.UI;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -40,6 +41,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     int bgmNum;
 
+    [SerializeField]
+    private Button reStartButton = null;
+
     // ?v?[???p???I?u?W?F?N?g
     [SerializeField]
     private Transform bluePool = null
@@ -51,7 +55,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         startButton.GetComponent<Button>().onClick.SetListener(StartGame);
-        
+        reStartButton.onClick.SetListener(ReStartButton);
     }
 
     // Start is called before the first frame update
@@ -231,6 +235,10 @@ public class GameController : MonoBehaviour
         return color;
     }
 
-    
+    void ReStartButton()
+    {
+        Scene loadScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(loadScene.name);
+    }
 
 }
