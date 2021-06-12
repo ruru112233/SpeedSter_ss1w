@@ -82,7 +82,7 @@ public class GameController : MonoBehaviour
             time = Time.time;
         }
         
-        if (time > 67f)
+        if (time > 68.5f)
         {
             //zoomGirl.SetActive(true);
             zoomGirl.transform.localScale = new Vector3(-1.5f,1.5f,1.5f);
