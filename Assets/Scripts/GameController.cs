@@ -66,6 +66,8 @@ public class GameController : MonoBehaviour
         //zoomGirl.SetActive(false);
         zoomGirl.transform.localScale = Vector3.zero;
 
+        time = 0;
+
         LoadCSV();
 
         StartCoroutine(GameStart());
@@ -83,9 +85,9 @@ public class GameController : MonoBehaviour
         if (isPlaying)
         {
             CheckNextNotes();
-            time = Time.time;
+            time += Time.deltaTime;
         }
-        
+
         if (time > 68.5f)
         {
             //zoomGirl.SetActive(true);
